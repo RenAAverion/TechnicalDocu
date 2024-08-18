@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Jersey+10&family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <title>React Documentation Page</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header class="navheader">React Documentation</header>
+      <ul>
+        <li><a  class="nav-link" href="#Introduction">Introduction</a></li>
+        <li class="nvl"><a  class="nav-link" href="#Getting_Started">Getting Started</a></li>
+        <li class="nvl"><a class="nav-link" href="#Components">Components</a></li>
+        <li class="nvl"><a class="nav-link" href="#State_and_Props">State and Props</a></li>
+        <li class="nvl"><a class="nav-link" href="#Lifecycle_Methods">Lifecycle Methods</a></li>
+        <li class="nvl"><a class="nav-link" href="#Hooks">Hooks</a></li>
+        <li class="nvl"><a class="nav-link" href="#Routing">Routing</a></li>
+        <li class="nvl"><a class="nav-link" href="#References">References</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>
+          React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and manage the state of their applications efficiently.
+        </p>
+      </section>
+      <section class="main-section" id="Getting_Started">
+        <header>Getting Started</header>
+        <h4>Installation</h4>
+        <p>To install React, you need Node.js and npm. Use the following command to create a new React application:</p>
+        <div class="codecontainer">
+        <code>npx create-react-app</code>
+          <code>my-app</code>
+          <code>cd my-app</code>
+          <code>npm start</code>
+        </div>
+      </section>
+      <section class="main-section" id="Components">
+        <header>Components</header>
+        <h4>Functional Components</h4>
+        <p>Functional components are simple JavaScript functions that return JSX.</p>
+        <div class="codecontainer">
+          <code>import React from 'react'</code><br>
+          <code>const Greeting = () => {</code>
+          <code class="fourspaces">return &lt;h1&gtHello, World!&lt/h1&gt";</code>
+          <code>};</code><br>
+          <code>export default Greeting;</code>
+        </div>
+        <h4>Class Components</h4>
+        <p>Class components are ES6 classes that extend React.Component.</p>
+        <div class="codecontainer">
+          <code>import React, { Component } from 'react';</code><br>
+          <code>class Greeting extends Component {</code>
+          <code>return &lt;h1&gtHello, World!&lt/h1&gt";</code>
+          <code class="fourspaces">render() {
+</code>
+          <code>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn &lth1&gt Hello, World!&lt/h1&gt;;</code>
+        <code>&nbsp&nbsp&nbsp&nbsp}</code>
+        <code>}</code>
+        <code>export default Greeting</code>
+        </div>
+      </section>
+      <section class="main-section" id="State_and_Props">
+        <header>State and Props</header>
+        <h4>State</h4>
+        <p>State is used to manage data within a component.</p>
+        <div class="codecontainer">
+          <code>import React, { useState } from 'react';</code><br>
+          <code>const Counter = () => {</code>
+          <code class="fourspaces">const [count, setCount] = useState(0);
+</code><br>
+          <code class="fourspaces">return (</code>
+          <code class="ninespaces">&ltdiv&gt</code>
+          <code class="thirteenspaces">&ltp&gtCount: {count}&lt/p&gt</code>
+          <code class="thirteenspaces">&ltbutton onClick={() => setCount(count + 1)}&gtIncrement&ltbutton&gt</code>
+          <code class="ninespaces">&lt/div&gt</code>
+          <code class="fourspaces">);</code>
+          <code>};</code><br>
+          <code>export default Counter;</code>
+        </div>
+        <h4>Props</h4>
+        <p>Props are used to pass data from parent to child components.</p>
+        <div class="codecontainer">
+          <code>import React from 'react';</code><br>
+          <code>const Greeting = ({ name }) => {</code>
+          <code class="fourspaces">return &lth1&gtHello, {name}!&lt/h1&gt;
+</code>
+          <code>};(</code><br>
+          <code>export default Greeting;</code>
+        </div>
+      </section>
+      <section class="main-section" id="Lifecycle_Methods">
+        <header>Lifecycle Methods</header>
+        <p>Lifecycle methods are special methods in class components that run at different stages of a component’s life.</p>
+        <div class="codecontainer">
+          <code>import React, { Component } from 'react';</code><br>
+          <code>class LifecycleDemo extends Component {</code>
+          <code class="fourspaces">rcomponentDidMount() {</code>
+          <code class="ninespaces">console.log('Component mounted');</code>
+          <code class="fourspaces">}</code><br>
+          <code>render() {</code>
+          <code class="ninespaces">return &ltdiv&gtCheck the console for lifecycle logs.&lt/div&gt </code>
+          <code class="fourspaces">}</code>
+          <code>}</code><br>
+          <code>export default LifecycleDemo;</code>
+        </div>
+      </section>
+      <section class="main-section" id="Hooks">
+        <header>Hooks</header>
+        <p>Hooks are functions that let you use state and other React features in functional components.</p>
+        <h4>useState</h4>
+        <div class="codecontainer">
+          <code>import React, { Component } from 'react';</code><br>
+          <code>const Counter = () => {</code>
+          <code class="fourspaces">const [count, setCount] = useState(0);{</code>
+          <code class="fourspaces">console.log('Component mounted');</code><br>
+          <code class="fourspaces">return (</code>
+          <code class="ninespaces">&ltdiv&gt{</code>
+          <code class="thirteenspaces">&ltp&gtCount: {count}&lt/p&gt </code>
+          <code class="thirteenspaces">&ltbutton onClick={() => setCount(count + 1)}&gtIncrement&ltbutton&gt</code>
+          <code class="ninespaces">&lt/div&gt{</code>
+          <code class="fourspaces">);</code>
+          <code>};</code><br>
+          <code>export default Counter;</code>
+        </div>
+        <h4>useEffect</h4>
+        <div class="codecontainer">
+          <code>import React, { useEffect } from 'react';</code><br>
+          <code>const EffectDemo = () => {</code>
+          <code class="fourspaces">useEffect(() => {</code>
+          <code class="ninespaces">console.log('Component mounted');</code>
+          <code class="fourspaces">}, []);</code><br>
+          <code class="fourspaces">return &ltdiv&gtCheck the console for effect logs.&lt/div&gt;</code>
+          <code>};</code><br>
+          <code>export default EffectDemo;</code>
+      </section>
+      <section class="main-section" id="Routing">
+        <header>Routing</header>
+        <p>React Router is used for client-side routing.</p>
+        <h4>Installation</h4>
+        <div class="codecontainer">
+        <code>npm install react-router-dom</code>
+        </div>
+        <h4>Usage</h4>
+        <div class="codecontainer">
+        <code>import React from 'react';</code>
+        <code>import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';</code>
+        <code>import Home from './Home';</code>
+        <code>import About from './About';</code><br>
+        <code>const App = () => {</code>
+        <code class="fourspaces">return (</code>
+        <code class="ninepaces">&ltRouter&gt</code>
+        <code class="thirteenspaces">&ltSwitch&gt</code>
+        <code class="twentyspaces">&ltRoute path="/" exact component={Home} /&gt</code>
+        <code class="twentyspaces">&ltRoute path="/about" component={About} /&gt</code>
+        <code class="thirteenspaces">&lt/Switch&gt</code>
+        <code class="ninepaces">&lt/Router&gt</code>
+        <code class="fourspaces">);</code>
+        <code>};</code><br>
+        <code>export default App;</code>
+        </div>
+      </section>
+      <section class="main-section" id="References">
+        <header>References</header>
+        <ol>
+          <li>React Official Documentation</li>
+          <li>React Router Documentation</li>
+          <li>React Hooks Introduction</li>
+          <li>State and Lifecycle in React</li>
+          <li>React Official Page</li>
+        </ol>
+        <p class="source">This documentation is based on <a id="lnk" href="https://github.com/NurKevser/weather-app-rc/blob/e1d23bac7a2533fb65da1ea99d1ce8a1e89bfbc5/src/App.js"> This</a><p>
+      </section>
+    </main>
+  </body>
+</html>
